@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f9f9f9" />
+  <meta name="description" content="Aprende a gestionar tu carrera musical con Mario Melgar. Music business, estrategia, marketing, A&R, crecimiento y monetización para artistas, managers y empresarios." />
+  <meta property="og:title" content="Mario Melgar | Si quieres vivir de la música, tienes que escuchar esto." />
+  <meta property="og:description" content="Conocimiento real de la industria musical para convertir talento en una carrera sostenible." />
+  <meta property="og:type" content="website" />
+  <title>Mario Melgar — Si quieres vivir de la música, tienes que escuchar esto.</title>
+
+  <!-- Inline favicon: abstract MM monogram in the brand's violet -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23945ff4'/%3E%3Cpath d='M11 47V17h8l13 17 13-17h8v30h-9V31L32 44 20 31v16z' fill='%23232323'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ink: #232323;
+      --violet: #945ff4;
+      --paper: #f9f9f9;
+      --muted: #77747e;
+      --line: rgba(35, 35, 35, .13);
+      --radius: 24px;
+      --max: 1240px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
+
+    /* Navigation */
+    .nav { height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 11px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -.04em; }
+    .brand-mark { width: 34px; height: 34px; display: grid; place-items: center; background: var(--violet); border-radius: 9px; font-size: 15px; font-weight: 800; }
+    .nav-links { display: flex; align-items: center; gap: 28px; font-size: 13px; font-weight: 600; }
+    .nav-cta, .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--violet); color: var(--ink); padding: 14px 20px; border-radius: 999px; font-size: 13px; font-weight: 800; transition: transform .2s ease, box-shadow .2s ease; }
+    .nav-cta:hover, .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(148,95,244,.24); }
+
+    /* Full-bleed hero. Replace the image URL below with your direct image URL for best quality. */
+    .hero { position: relative; min-height: min(790px, calc(100svh - 78px)); display: flex; align-items: flex-end; overflow: hidden; background: #17151a; color: white; isolation: isolate; }
+    .hero-photo { position: absolute; top: 0; left: 0; right: auto; z-index: -2; width: 130%; height: 100%; object-fit: cover; object-position: center 43%; filter: saturate(.86); }
+    .hero::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(13,12,16,.84) 0%, rgba(13,12,16,.58) 34%, rgba(13,12,16,.12) 68%, rgba(13,12,16,.02) 100%), linear-gradient(0deg, rgba(13,12,16,.62) 0%, transparent 55%); }
+    .hero .hero-content, .hero .hero-content h1, .hero .hero-content p, .hero .hero-content .eyebrow, .hero .hero-content a { text-transform: uppercase; letter-spacing: .035em; }
+    .hero-content { padding: 100px 0 78px; max-width: 660px; margin-left: max(24px, calc((100vw - 1240px) / 2)); margin-right: auto; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; font-size: 11px; text-transform: uppercase; letter-spacing: .16em; font-weight: 800; }
+    .eyebrow::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--violet); }
+    h1, h2, h3, p { margin-top: 0; }\n    h1, h2, h3 { text-transform: uppercase; }
+    h1 { margin: 24px 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(48px, 7.5vw, 104px); line-height: .96; letter-spacing: -.065em; font-weight: 700; }
+    h1 em { color: var(--violet); font-style: normal; }
+    .hero-copy { max-width: 570px; color: rgba(255,255,255,.78); font-size: clamp(16px, 1.7vw, 19px); line-height: 1.65; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 30px; }
+    .btn-light { color: white; border: 1px solid rgba(255,255,255,.38); background: rgba(255,255,255,.08); backdrop-filter: blur(10px); }
+    .hero-note { margin-top: 20px; color: rgba(255,255,255,.52); font-size: 12px; }
+
+    /* Intro strip */
+    .proof { padding: 28px 0; border-bottom: 1px solid var(--line); }
+    .proof-inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; flex-wrap: wrap; }
+    .proof-label { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .12em; font-weight: 800; }
+    .proof-items { display: flex; flex-wrap: wrap; gap: 12px 30px; font-size: 13px; font-weight: 700; }
+    .proof-items span::before { content: '✳'; color: var(--violet); margin-right: 8px; }
+
+    /* Content sections */
+    section.section { padding: 112px 0; }
+    .section-head { display: grid; grid-template-columns: 1.05fr .75fr; align-items: end; gap: 45px; margin-bottom: 54px; }
+    .kicker { color: #7e59cb; font-size: 11px; text-transform: uppercase; letter-spacing: .15em; font-weight: 800; margin-bottom: 18px; }
+    h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(38px, 5.2vw, 68px); line-height: 1; letter-spacing: -.06em; margin-bottom: 0; }
+    .section-desc { color: var(--muted); font-size: 16px; line-height: 1.7; max-width: 480px; margin-bottom: 4px; }
+    .benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .benefit { padding: 29px; border: 1px solid var(--line); border-radius: var(--radius); min-height: 230px; background: rgba(255,255,255,.38); }
+    .benefit-num { font-family: 'Space Grotesk', sans-serif; font-size: 12px; color: #8b63d6; font-weight: 700; }
+    .benefit h3 { font-family: 'Space Grotesk', sans-serif; font-size: 23px; letter-spacing: -.04em; margin: 38px 0 10px; }
+    .benefit p { color: var(--muted); line-height: 1.6; font-size: 14px; margin: 0; }
+
+    /* Video */
+    .video-section { background: var(--ink); color: white; padding: 100px 0; }
+    .video-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; align-items: center; }
+    .video-section h2 { font-size: clamp(36px, 4.8vw, 62px); }
+    .video-section .section-desc { color: rgba(255,255,255,.62); margin-top: 22px; }
+    .video-frame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 18px; background: #111; box-shadow: 0 24px 80px rgba(0,0,0,.25); }
+    .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+    /* Pricing */
+    .pricing { background: #f0edf6; }
+    .pricing .section-head { margin-bottom: 48px; }
+    .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: stretch; }
+    .plan { display: flex; flex-direction: column; padding: 32px; border: 1px solid rgba(35,35,35,.12); background: var(--paper); border-radius: 22px; min-height: 440px; }
+    .plan.featured { background: var(--ink); color: white; border-color: var(--ink); transform: translateY(-10px); box-shadow: 0 25px 60px rgba(35,35,35,.13); }
+    .plan-tag { align-self: flex-start; border-radius: 999px; background: #eee6ff; color: #6b42bd; padding: 7px 11px; font-size: 10px; text-transform: uppercase; letter-spacing: .1em; font-weight: 800; }
+    .featured .plan-tag { background: var(--violet); color: var(--ink); }
+    .plan h3 { font-family: 'Space Grotesk', sans-serif; font-size: 24px; letter-spacing: -.04em; margin: 24px 0 8px; }
+    .price { font-family: 'Space Grotesk', sans-serif; font-size: 44px; letter-spacing: -.06em; font-weight: 700; }
+    .price small { font-family: 'DM Sans', sans-serif; font-size: 13px; letter-spacing: 0; font-weight: 500; color: var(--muted); }
+    .featured .price small { color: rgba(255,255,255,.56); }
+    .plan-intro { color: var(--muted); font-size: 13px; line-height: 1.55; min-height: 42px; }
+    .featured .plan-intro { color: rgba(255,255,255,.62); }
+    .plan ul { list-style: none; padding: 0; margin: 24px 0 30px; display: grid; gap: 13px; font-size: 13px; line-height: 1.45; }
+    .plan li::before { content: '✓'; color: #8b63d6; font-weight: 900; margin-right: 10px; }
+    .featured li::before { color: var(--violet); }
+    .plan .btn { width: 100%; margin-top: auto; }
+    .plan:not(.featured) .btn { background: var(--ink); color: white; }
+    .featured .btn { background: var(--violet); color: var(--ink); }
+    .pricing-footnote { text-align: center; color: var(--muted); font-size: 12px; margin-top: 26px; }
+
+    /* About / closing */
+    .about-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; align-items: start; }
+    .about-aside { position: sticky; top: 30px; }
+    .about-copy p { color: #55525b; font-size: 17px; line-height: 1.8; }
+    .about-copy strong { color: var(--ink); }
+    .quote { margin-top: 38px; border-left: 3px solid var(--violet); padding: 7px 0 7px 22px; font-family: 'Space Grotesk', sans-serif; font-size: 25px; line-height: 1.25; letter-spacing: -.035em; }
+    .closing { background: var(--violet); padding: 90px 0; text-align: center; }
+    .closing h2 { max-width: 900px; margin: 0 auto 25px; font-size: clamp(42px, 6vw, 78px); }
+    .closing p { max-width: 570px; margin: 0 auto 30px; font-size: 16px; line-height: 1.7; }
+    .closing .btn { background: var(--ink); color: white; }
+    footer { padding: 28px 0; background: var(--ink); color: rgba(255,255,255,.6); font-size: 12px; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+    footer .brand { color: white; }
+
+    @media (max-width: 900px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+      .hero { min-height: 690px; }
+      .hero-content { padding: 80px 0 58px; }
+      .section-head, .video-grid, .about-grid { grid-template-columns: 1fr; gap: 25px; }
+      .benefits { grid-template-columns: 1fr; }
+      .benefit { min-height: 190px; }
+      .benefit h3 { margin-top: 25px; }
+      .plans { grid-template-columns: 1fr; max-width: 560px; margin-inline: auto; }
+      .plan.featured { transform: none; }
+      .about-aside { position: static; }
+      section.section { padding: 78px 0; }
+      .video-section { padding: 78px 0; }
+    }
+    @media (max-width: 540px) {
+      .wrap { width: min(var(--max), calc(100% - 32px)); }
+      .nav { height: 68px; }
+      .brand { font-size: 14px; }
+      .nav-cta { padding: 12px 15px; font-size: 11px; }
+      .hero { min-height: 650px; }
+      .hero-photo { object-position: 60% center; }
+      .hero::after { background: linear-gradient(90deg, rgba(13,12,16,.72), rgba(13,12,16,.18)), linear-gradient(0deg, rgba(13,12,16,.76), transparent 80%); }
+      h1 { font-size: clamp(47px, 13vw, 68px); }
+      .hero-copy { font-size: 15px; }
+      .hero-actions .btn { width: 100%; }
+      .proof-inner { align-items: flex-start; }
+      .proof-items { gap: 10px 18px; font-size: 12px; }
+      h2 { font-size: 42px; }
+      .plan { padding: 26px; }
+      .closing { padding: 70px 0; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="#top" aria-label="Mario Melgar, inicio">
+      <span class="brand-mark">MM</span>
+      <span>MARIO MELGAR<span style="color:var(--violet)">.</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="#aprende">Qué aprenderás</a>
+      <a href="#mario">Sobre Mario</a>
+      <a href="#planes">Planes</a>
+      <a class="nav-cta" href="https://cursos.mariomelgar.com/feed" target="_blank" rel="noopener">Empieza ahora <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Presentación de Mario Melgar">
+      <!-- TODO: Replace this src with a direct image URL (or upload mario-hero.jpg to the GitHub repo and use src="./mario-hero.jpg"). Facebook page URLs are not direct image URLs. -->
+      <img class="hero-photo" src="https://www.mariomelgar.com/yQx5C.jpg" alt="Retrato editorial de Mario Melgar" fetchpriority="high" />
+      <div class="wrap hero-content">
+        <span class="eyebrow">Music business · Estrategia · Carrera</span>
+        <h1>Si quieres vivir<br>de la música,<br><em>tienes que<br>escuchar esto.</em></h1>
+        <p class="hero-copy">El talento abre puertas. El conocimiento, la estrategia y las decisiones correctas construyen una carrera. Aprende cómo funciona realmente la industria musical y toma el control de tu futuro.</p>
+        <div class="hero-actions">
+          <a class="btn" href="https://cursos.mariomelgar.com/feed" target="_blank" rel="noopener">Quiero aprender de Mario <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-light" href="#video">Mira el video primero <span aria-hidden="true">↓</span></a>
+        </div>
+        <p class="hero-note">Para artistas, managers, productores y empresarios de la música.</p>
+      </div>
+    </section>
+
+
+    <div class="proof">
+      <div class="wrap proof-inner">
+        <span class="proof-label">Aprende de la experiencia real</span>
+        <div class="proof-items">
+          <span>Ex Director de Sony Music</span>
+          <span>25+ años en la industria</span>
+          <span>Music business global</span>
+          <span>De la estrategia a la ejecución</span>
+        </div>
+      </div>
+    </div>
+
+
+    <section class="section" id="aprende">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">No basta con tener talento</p>
+            <h2>Aprende las reglas.<br>Después, <span style="color:var(--violet)">cámbialas.</span></h2>
+          </div>
+          <p class="section-desc">La industria musical cambió. Las oportunidades son enormes, pero también lo son los errores que pueden costarte años. Aquí aprenderás a tomar decisiones con visión de negocio.</p>
+        </div>
+        <div class="benefits">
+          <article class="benefit">
+            <span class="benefit-num">01 / VISIÓN</span>
+            <h3>Piensa como un empresario</h3>
+            <p>Construye una estrategia, define objetivos y convierte tu proyecto musical en un negocio con dirección y propósito.</p>
+          </article>
+          <article class="benefit">
+            <span class="benefit-num">02 / CRECIMIENTO</span>
+            <h3>Conecta con tu audiencia</h3>
+            <p>Marketing, branding, plataformas digitales, streaming, comunidad y herramientas para desarrollar fans, no solo reproducciones.</p>
+          </article>
+          <article class="benefit">
+            <span class="benefit-num">03 / NEGOCIO</span>
+            <h3>Aprende a monetizar</h3>
+            <p>Entiende derechos, distribución, acuerdos, ingresos, alianzas y nuevas oportunidades de monetización en la economía del creador.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="video-section" id="video">
+      <div class="wrap video-grid">
+        <div>
+          <p class="kicker">Una conversación que puede cambiar tu perspectiva</p>
+          <h2>Tu carrera merece algo más que improvisación.</h2>
+          <p class="section-desc">Dale play. Descubre mi manera de entender la industria y por qué el conocimiento de music business puede marcar la diferencia entre tener un proyecto y construir una carrera.</p>
+          <a class="btn" href="https://cursos.mariomelgar.com/feed" target="_blank" rel="noopener">Explora todos los cursos ↗</a>
+        </div>
+        <div class="video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/yLJu5wTiLeg?rel=0&modestbranding=1" title="Mario Melgar — Aprende de music business" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section pricing" id="planes">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Tu siguiente paso empieza aquí</p>
+            <h2>Invierte en tu carrera.<br><span style="color:#8b63d6">No en la suerte.</span></h2>
+          </div>
+          <p class="section-desc">Elige cómo quieres aprender. Empieza gratis, profundiza cada mes o comprométete con tu crecimiento y obtén tu certificado oficial.</p>
+        </div>
+
+        <div class="plans">
+          <article class="plan">
+            <span class="plan-tag">Para explorar</span>
+            <h3>Gratis</h3>
+            <div class="price">US$ 0 <small>/ siempre</small></div>
+            <p class="plan-intro">Conoce el contenido y empieza a desarrollar tu mentalidad de music business.</p>
+            <ul>
+              <li>Acceso a cursos seleccionados</li>
+              <li>Clases dictadas por Mario Melgar</li>
+              <li>Aprende a tu ritmo</li>
+            </ul>
+            <a class="btn" href="https://cursos.mariomelgar.com/feed" target="_blank" rel="noopener">Crear cuenta gratis ↗</a>
+          </article>
+
+          <article class="plan featured">
+            <span class="plan-tag">Más elegido · Mejor valor</span>
+            <h3>Mensual</h3>
+            <div class="price">US$ 19 <small>/ mes</small></div>
+            <p class="plan-intro">Todo el conocimiento. Más herramientas para llevarlo a la práctica.</p>
+            <ul>
+              <li>Acceso a <strong>todos</strong> los cursos de Mario</li>
+              <li>Cuponera exclusiva de descuentos</li>
+              <li>Contenido para impulsar tu carrera</li>
+              <li>Flexibilidad: paga mes a mes</li>
+            </ul>
+            <a class="btn" href="https://cursos.mariomelgar.com/feed" target="_blank" rel="noopener">Quiero el plan mensual ↗</a>
+          </article>
+
+          <article class="plan">
+            <span class="plan-tag">Para ir en serio</span>
+            <h3>Anual</h3>
+            <div class="price">US$ 190 <small>/ año</small></div>
+            <p class="plan-intro">Tu compromiso de 12 meses con el siguiente nivel profesional.</p>
+            <ul>
+              <li>Todo lo incluido en el plan mensual</li>
+              <li><strong>Certificado oficial de estudios</strong></li>
+              <li>Un año completo para aprender y aplicar</li>
+              <li>Ahorras US$ 38 frente al pago mensual</li>
+            </ul>
+            <a class="btn" href="https://cursos.mariomelgar.com/feed" target="_blank" rel="noopener">Quiero el plan anual ↗</a>
+          </article>
+        </div>
+        <p class="pricing-footnote">Todos los planes se gestionan desde la plataforma de cursos. Precios expresados en dólares estadounidenses.</p>
+      </div>
+    </section>
+
+
+    <section class="section" id="mario">
+      <div class="wrap about-grid">
+        <div class="about-aside">
+          <p class="kicker">Aprende con experiencia, no con teoría vacía</p>
+          <h2>La industria desde <span style="color:var(--violet)">adentro.</span></h2>
+        <div class="quote">“El talento es el comienzo. Entender el negocio es lo que te permite sostener una carrera.”</div>
+        </div>
+        <div class="about-copy">
+          <p>Soy <strong>Mario Melgar</strong>. Llevo más de 25 años trabajando en la industria musical, desarrollando artistas, liderando equipos, creando estrategias y construyendo negocios en América Latina y otros mercados.</p>
+          <p>Fui Director de Sony Music Perú y he trabajado en marketing, A&R, programación, distribución digital, desarrollo de audiencias y crecimiento. He colaborado con artistas, sellos, medios, plataformas y empresas que forman parte del ecosistema musical.</p>
+          <p>También soy emprendedor y educador. Creo que el conocimiento de la industria no debería ser un privilegio reservado a unos pocos: debe estar al alcance de quienes tienen talento, ambición y ganas de hacer que las cosas sucedan.</p>
+          <p>Por eso creé estos cursos. Para compartir lo que aprendí en el campo de batalla: <strong>sin humo, sin fórmulas mágicas y con visión real de negocio.</strong></p>
+          <a class="btn" href="https://cursos.mariomelgar.com/feed" target="_blank" rel="noopener">Aprende conmigo ↗</a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="closing">
+      <div class="wrap">
+        <p class="kicker" style="color:var(--ink)">El próximo capítulo de tu carrera</p>
+        <h2>El talento te trajo hasta aquí.<br>Ahora toca <span style="color:var(--paper)">hacer que suceda.</span></h2>
+        <p>Empieza hoy. Aprende a tomar mejores decisiones, descubre nuevas oportunidades y construye una carrera musical con futuro.</p>
+        <a class="btn" href="https://cursos.mariomelgar.com/feed" target="_blank" rel="noopener">Entra a la academia de Mario Melgar ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <a class="brand" href="#top"><span class="brand-mark">MM</span><span>MARIO MELGAR<span style="color:var(--violet)">.</span></span></a>
+      <span>© <span id="year">2026</span> Mario Melgar. Todos los derechos reservados.</span>
+      <a href="https://cursos.mariomelgar.com/feed" target="_blank" rel="noopener">Acceder a la academia ↗</a>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
